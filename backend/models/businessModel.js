@@ -104,5 +104,7 @@ const businessSchema=new mongoose.Schema({
     timestamps:true
 })
 
+businessSchema.index({ location: '2dsphere' });
+
 const Business=mongoose.model("Business",businessSchema);
 module.exports=Business;
